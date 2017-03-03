@@ -1,1 +1,4 @@
 0001-http_loadtime-plugin-Fix-several-bugs.patch
+CVE-2017-6188.patch
+CVE-2017-6188-2.patch
+CVE-2017-6188-3.patch

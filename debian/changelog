@@ -1,3 +1,22 @@
+munin (2.0.25-2ubuntu0.16.04.3) xenial-security; urgency=medium
+
+  * SECURITY REGRESSION: log spamming issue (LP: #1669764)
+    - debian/patches/CVE-2017-6188-3.patch: use looks_like_number in
+      master/_bin/munin-cgi-graph.in.
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Fri, 03 Mar 2017 07:19:15 -0500
+
+munin (2.0.25-2ubuntu0.16.04.2) xenial-security; urgency=medium
+
+  * SECURITY UPDATE: local file write vulnerability
+    - debian/patches/CVE-2017-6188.patch: avoid expansion in list context
+      in master/_bin/munin-cgi-graph.in.
+    - debian/patches/CVE-2017-6188-2.patch: handle empty strings in
+      master/_bin/munin-cgi-graph.in.
+    - CVE-2017-6188
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Thu, 02 Mar 2017 07:15:21 -0500
+
 munin (2.0.25-2) unstable; urgency=medium
 
   [ Holger Levsen ]

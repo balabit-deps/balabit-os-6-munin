@@ -1,7 +1,8 @@
 Source: munin
 Section: net
 Priority: optional
-Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
 Uploaders: Holger Levsen <holger@debian.org>, 
  Stig Sandbeck Mathisen <ssm@debian.org>
 Build-Depends-Indep:
