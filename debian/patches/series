@@ -2,3 +2,4 @@
 CVE-2017-6188.patch
 CVE-2017-6188-2.patch
 CVE-2017-6188-3.patch
+0005-Do-not-report-speed-below-0-for-network-devices.patch

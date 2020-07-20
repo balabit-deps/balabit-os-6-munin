@@ -1,0 +1,25 @@
+From: Lucas Kanashiro <lucas.kanashiro@canonical.com>
+Date: Mon, 20 Jul 2020 09:58:22 -0300
+Subject: Do not report speed below 0 for network devices
+
+Origin: upstream, https://github.com/munin-monitoring/munin/commit/78c3c3aa
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1673357
+Reviewed-by: Lucas Kanashiro <kanashiro@ubuntu.com>
+Last-Updated: 2020-07-20
+---
+ plugins/node.d.linux/if_.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/plugins/node.d.linux/if_.in b/plugins/node.d.linux/if_.in
+index 7718979..34b57ef 100644
+--- a/plugins/node.d.linux/if_.in
++++ b/plugins/node.d.linux/if_.in
+@@ -91,7 +91,7 @@ findspeed_mbps() {
+     # iwlist first)
+     if [[ -r /sys/class/net/$INTERFACE/speed ]]; then
+             SPEED=$(cat /sys/class/net/$INTERFACE/speed 2>/dev/null)
+-            if [[ -n "$SPEED" ]]; then
++            if [[ "$SPEED" -gt 0 ]]; then
+                 echo $SPEED
+                 return
+             fi
